@@ -34,9 +34,9 @@ remotes     = remote -v
 remove      = rm
 resave      = commit --amend
 rewrite     = rebase -i
-ru          = log --since=\"one week ago\" --all --no-merges --oneline #--author=\"{{ .persona.real.name }}\"
-#rushes      = log --since=\"1970-01-01 00:00:00\" --all --no-merges --oneline #--author=\"{{ .persona.real.name }}\"
-rushes      = log --since=\"one week ago\" --all --no-merges --oneline #--author=\"{{ .persona.real.name }}\"
+ru          = log --since=\"one week ago\" --all --no-merges --oneline #--author=\"{{ .persona.off.name }}\"
+#rushes      = log --since=\"1970-01-01 00:00:00\" --all --no-merges --oneline #--author=\"{{ .persona.off.name }}\"
+rushes      = log --since=\"one week ago\" --all --no-merges --oneline #--author=\"{{ .persona.off.name }}\"
 save        = commit -am
 show-all    = log --follow
 shop-all    = log --follow -p
