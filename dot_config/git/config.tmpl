@@ -1,13 +1,10 @@
 [user]
-    name = {{ .persona.real.name }}
-    email = {{ .persona.real.email_work }}
-    signingkey = {{ .persona.real.pgp_fingerprint }}
+    name = ""
+    email = ""
+    signingkey = ""
 
 [log]
     showSignature = false # set to true for more verbosity
-
-[transfer]
-    fsckobjects = true
 
 [commit]
     gpgSign = true
@@ -21,10 +18,6 @@
 
 [pull]
     rebase = true  # rebase instead of merge when pulling. Use --no-rebase flag to set back to merge
-
-[merge]
-    #verifySignatures = true  # Deactivated because noone signs their commits. Use --no-verify-signatures if this is activated and merging/pulling fails. 
-    tool = diffuse
 
 [color]
     ui = true
@@ -40,8 +33,7 @@
 
 [core]
     pager = less
-    editor = nvim
-    excludesFile = $HOME/.config/git/ignore  # the default, but now explicit
+    editor = vim
 
 [diff]
     renames = copies  # Detect copies as well as renames
@@ -51,10 +43,10 @@
 [include]
     path = alias  # save alias in another file
 
-[includeIf "gitdir:~/repos/{{ .persona.alt.username }}/"]
+[includeIf "gitdir:~/mgit/"]
     path = config_altpersona
 
-[includeIf "gitdir:~/repos/{{ .persona.real.username }}/"]
-    path = config_realpersona
+[includeIf "gitdir:~/git/"]
+    path = config_offpersona
 
 # vim:filetype=gitconfig expandtab shiftwidth=4
