@@ -9,3 +9,4 @@ alias egrep='egrep --color=auto'
 alias diff="diff --color=auto"
 alias p="pass"
 alias cm="chezmoi"
+alias minecraft="java -jar downloads/TLauncher-2.72.jar"
